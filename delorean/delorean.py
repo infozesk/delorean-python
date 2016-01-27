@@ -4,8 +4,9 @@
 " A delorean module in python"
 
 
-from datetime import date, datetime
+from datetime import date, datetime, timedelta
 import time
+import random
 
 
 class Delorean(object):
@@ -38,6 +39,11 @@ class Delorean(object):
     def set_target_date(self, target_date):
         "Define the delorean target date, date shall follow format DD/MM/YYYY"
         self.target_date = datetime.strptime(target_date, '%d/%m/%Y').date()
+        # A bug in the date selector make the target date changing
+        if random.random() > 0.95:
+            timeshift = timedelta(random.randint(-100, 100))
+            print 'Time selector bug ! -> time shift %s ' % timeshift
+            self.target_date = self.target_date + timeshift
 
     def get_date(self):
         "return the current delorean date location"

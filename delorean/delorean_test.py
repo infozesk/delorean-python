@@ -45,6 +45,11 @@ def test_delorean_target_date():
     delo.set_target_date('10/01/1200')
     assert delo.target_date == datetime.date(1200, 01, 10)
 
+    for year in range(2000,2999):
+        delo.set_target_date('10/01/%s' % year)
+        assert delo.target_date == datetime.date(year, 01, 10)
+
+
 
 def test_delorean_get_date():
     "test the delorean plutonium insertion"
