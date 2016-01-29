@@ -2,6 +2,11 @@
 
 une implémentation de delorean en python
 
+# Réalisé par:
+
+- PRENOM NOM ELEVE 1, prenom.nom@monmail.com
+- PRENOM NOM ELEVE 2, prenom2.nom2@monmail.com
+
 # Lancer les tests
 
     py.test --cov=delorean
