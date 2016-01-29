@@ -1,5 +1,9 @@
 # Delorean CHANGELOG
 
+## v1.1.0
+
+- To be completed
+
 ## v1.0.0
 
 - speed
