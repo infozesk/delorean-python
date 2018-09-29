@@ -23,7 +23,7 @@ def test_delorean_set_speed():
     "test the delorean set_speed method"
     delo = Delorean()
     assert delo.get_speed() == 0
-    for speed in range(1,100):
+    for speed in range(1, 100):
         delo.set_speed(speed)
         assert delo.get_speed() == speed
 
@@ -40,15 +40,14 @@ def test_delorean_target_date():
     "test the delorean plutonium insertion"
     delo = Delorean()
     assert delo.target_date is None
-    delo.set_target_date('01/12/2199')
-    assert delo.target_date == datetime.date(2199, 12, 01)
-    delo.set_target_date('10/01/1200')
-    assert delo.target_date == datetime.date(1200, 01, 10)
+    delo.set_target_date("01/12/2199")
+    assert delo.target_date == datetime.date(2199, 12, 1)
+    delo.set_target_date("10/01/1200")
+    assert delo.target_date == datetime.date(1200, 1, 10)
 
-    for year in range(2000,2999):
-        delo.set_target_date('10/01/%s' % year)
-        assert delo.target_date == datetime.date(year, 01, 10)
-
+    for year in range(2000, 2999):
+        delo.set_target_date("10/01/%s" % year)
+        assert delo.target_date == datetime.date(year, 1, 10)
 
 
 def test_delorean_get_date():
@@ -63,8 +62,8 @@ def test_delorean_time_travel():
     today = datetime.date.today()
     assert delo.get_date() == today
 
-    tomorrow = datetime.date(2199, 12, 01)
-    delo.set_target_date('01/12/2199')
+    tomorrow = datetime.date(2199, 12, 1)
+    delo.set_target_date("01/12/2199")
     # no time travel
     assert delo.get_date() == today
 

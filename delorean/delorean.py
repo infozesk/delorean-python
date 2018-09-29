@@ -11,6 +11,7 @@ import random
 
 class Delorean(object):
     """A delorean class"""
+
     def __init__(self):
         super(Delorean, self).__init__()
         self.speed = 0
@@ -38,11 +39,11 @@ class Delorean(object):
 
     def set_target_date(self, target_date):
         "Define the delorean target date, date shall follow format DD/MM/YYYY"
-        self.target_date = datetime.strptime(target_date, '%d/%m/%Y').date()
+        self.target_date = datetime.strptime(target_date, "%d/%m/%Y").date()
         # A bug in the date selector make the target date changing
         if random.random() > 0.95:
             timeshift = timedelta(random.randint(-100, 100))
-            print 'Time selector bug ! -> time shift %s ' % timeshift
+            print("Time selector bug ! -> time shift %s " % timeshift)
             self.target_date = self.target_date + timeshift
 
     def get_date(self):
@@ -56,4 +57,8 @@ class Delorean(object):
                 if 88 < self.get_speed():
                     self.date = self.target_date
                     self.plutonium = False
-                    print 'Delorean traveled in time to %s' % self.date.strftime('%d/%m/%Y')
+                    print(
+                        "Delorean traveled in time to %s"
+                        % self.date.strftime("%d/%m/%Y")
+                    )
+
