@@ -2,13 +2,13 @@
 
 une implémentation de delorean en python
 
-- PRENOM NOM ELEVE 1, prenom.nom@monmail.com
-- PRENOM NOM ELEVE 2, prenom2.nom2@monmail.com
+- ELEVE1: PRENOM NOM, prenom.nom@monmail.com
+- ELEVE2: PRENOM NOM, prenom2.nom2@monmail.com
 
 1. Mettre vos noms ci dessus
-1. Mettre à jour les liens status avec le numéro de projet
-1. Dans les settings du projets, onglet CI/CD entrez la configuration de couverture suivante ``\d+\%\s*$``
- ![coverage settings](coverage_python.png)
+1. Mettre à jour les liens status (ci dessous) avec le numéro de projet
+1. Dans les settings du projets, onglet CI/CD entrez la configuration de couverture suivante `\d+\%\s*$`
+   ![coverage settings](coverage_python.png)
 1. Réaliser les fonctionnalités du [TODOs](#todos)
 
 ## liens status ( à mettre à jour )
@@ -17,7 +17,6 @@ une implémentation de delorean en python
 
 [![pipeline status](https://gitlab.iut-blagnac.fr/git_2018/delo-java-00/badges/develop/pipeline.svg)](https://gitlab.iut-blagnac.fr/git_2018/delo-java-00/commits/develop)
 [![coverage report](https://gitlab.iut-blagnac.fr/git_2018/delo-java-00/badges/develop/coverage.svg)](https://gitlab.iut-blagnac.fr/git_2018/delo-java-00/commits/develop)
-
 
 ## Lancer les tests
 
@@ -39,21 +38,20 @@ py.test --cov=delorean --cov-report html
 
 ### Ajout lentille gravitationnelle
 
-- ajouter la méthode ``enable_antigravity_lens(self)`` dans la classe ``Delorean``
-- ajouter la méthode ``disable_antigravity_lens(self)`` dans la classe ``Delorean``
-- ajouter la méthode ``is_flying(self)`` dans la classe ``Delorean`` qui
-  renvoie ``True`` quand la lentille est activée.
-- ajouter le test ``test_delorean_antigravity()`` dans ``delorean_test.py``
+- ajouter la méthode `enable_antigravity_lens(self)` dans la classe `Delorean`
+- ajouter la méthode `disable_antigravity_lens(self)` dans la classe `Delorean`
+- ajouter la méthode `is_flying(self)` dans la classe `Delorean` qui
+  renvoie `True` quand la lentille est activée.
+- ajouter le test `test_delorean_antigravity()` dans `delorean_test.py`
 
 ### Amélioration du réacteur en reacteur à déchets
 
-- remplacer la méthode ``insert_plutonium(self)`` par la méthode ``insert_waste(self)`` dans la classe ``Delorean``
-- remplacer la méthode ``has_plutonium(self)`` par la méthode ``has_waste(self)`` dans la classe ``Delorean``
-- remplacer la méthode ``test_delorean_insert_plutonium()`` par la méthode ``test_delorean_insert_waste(self)`` dans ``delorean_test.py``
+- remplacer la méthode `insert_plutonium(self)` par la méthode `insert_waste(self)` dans la classe `Delorean`
+- remplacer la méthode `has_plutonium(self)` par la méthode `has_waste(self)` dans la classe `Delorean`
+- remplacer la méthode `test_delorean_insert_plutonium()` par la méthode `test_delorean_insert_waste(self)` dans `delorean_test.py`
 
 ### Ajout climatisation
 
-- ajouter la méthode ``set_temperature(self, temperature)`` dans la classe ``Delorean``
-- ajouter la méthode ``get_temperature(self)`` dans la classe ``Delorean``
-- ajouter le test ``test_delorean_temperature()`` dans ``delorean_test.py``
-
+- ajouter la méthode `set_temperature(self, temperature)` dans la classe `Delorean`
+- ajouter la méthode `get_temperature(self)` dans la classe `Delorean`
+- ajouter le test `test_delorean_temperature()` dans `delorean_test.py`
