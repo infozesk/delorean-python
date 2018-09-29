@@ -1,6 +1,10 @@
+image: python:2.7
+
 stages:
   - test
 
 test_job:
   stage: test
-  script: py.test --verbose --cov=delorean/
+  script:
+    - pip install pytest pytest-cov
+    - py.test --verbose --cov=delorean/
